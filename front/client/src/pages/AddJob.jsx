@@ -5,3 +5,4 @@ export const AddJob = () => {
     <div>AddJob</div>
   )
 }
+export default AddJob;

@@ -5,3 +5,4 @@ export const AllJobs = () => {
     <div>AllJobs</div>
   )
 }
+export default AllJobs
