@@ -1,11 +1,13 @@
 import React from "react";
+import {HomeLayout,Landing,Register,Login,DashboardLayout,EditJob} from './pages'
 import { RouterProvider,createBrowserRouter } from "react-router-dom";
+import HomeLayout from "./pages/HomeLayout";
 //
 const router = createBrowserRouter([
   { //path es la url de la pagina
     path:'/',
     //element es lo que nos muestra la pagina
-    element: <h1>home</h1>,
+    element: <HomeLayout/>,
 
   },
   { path:'/about',
