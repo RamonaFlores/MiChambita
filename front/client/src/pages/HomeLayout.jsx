@@ -1,8 +1,12 @@
 import React from 'react'
-
+import {Outlet} from 'react-router-dom'
 const HomeLayout = () => {
   return (
-    <h1>HomeLayout</h1>
+    <div>
+      <nav>HomeLayout</nav>
+      <Outlet/>
+    </div>
+    
   )
 }
 

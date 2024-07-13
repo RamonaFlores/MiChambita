@@ -5,7 +5,7 @@ import {
   Register,
   Login,
   DashboardLayout,
-  EditJob,
+  Error
 } from "./pages";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -16,21 +16,34 @@ const router = createBrowserRouter([
     path: "/",
     //element es lo que nos muestra la pagina
     element: <HomeLayout />,
-  },
-  {
-    path: "/register",
+    
+    errorElement: <Error/>,
+    //aqui se ponen las rutas hijas de esta ruta principal
+    //o sea quedaria /register y tal. ya que nuestra
+    //ruta papa es '/' ,
+    children: [
+      {index: true,
+        element: <Landing/>,
+      },
+      {
+        //como son rutas relativas pues, no hay necesidad de
+        //tener el '/' al inicio
+        path: "register",
+    
+        element: <Register />,
+      },
+      {
+        path: "login",
+    
+        element: <Login />,
+      },
+      {
+        path: "dashboard",
+    
+        element: <DashboardLayout />,
+      }
 
-    element: <Register />,
-  },
-  {
-    path: "/login",
-
-    element: <Login />,
-  },
-  {
-    path: "/dashboard",
-
-    element: <DashboardLayout />,
+    ]
   },
 ]);
 const App = () => {

@@ -2,7 +2,10 @@ import React from 'react'
 
 export const Error = () => {
   return (
-    <div>Error</div>
+    <div>
+      <h1> Error Page</h1>
+      <Link to = '/'> back home </Link>
+    </div>
   )
 }
 export default Error;
