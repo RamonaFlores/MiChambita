@@ -5,7 +5,12 @@ import {
   Register,
   Login,
   DashboardLayout,
-  Error
+  Error,
+  AddJob,
+  Stats,
+  AllJobs,
+  Profile,
+  Admin
 } from "./pages";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -41,6 +46,26 @@ const router = createBrowserRouter([
         path: "dashboard",
     
         element: <DashboardLayout />,
+        children: [
+          {
+            index:true,
+            element:<AddJob/>
+
+          },
+          {
+            path: 'all-jobs',
+            element:<AllJobs/>
+          },
+          {
+            path: 'profile',
+            element:<Profile/>
+          },
+          {
+            path: 'admin',
+            element:<Admin/>
+          },
+          
+        ]
       }
 
     ]

@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Admin = () => {
   return (
-    <div>Admin</div>
-  )
-}
+    <div><h1>Admin</h1></div>
+  );
+};
 export default Admin;
